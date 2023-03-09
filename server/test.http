@@ -1,0 +1,9 @@
+POST https://localhost:4000/app/signup
+Content-Type: application/json
+
+{
+    "fullName": "John Doe",
+    "username": "johndoe",
+    "email": "johndoe@qmail.com",
+    "password": "john123456"
+}
