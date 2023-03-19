@@ -15,4 +15,4 @@ mongo.connect(process.env.DATABASE_ACCESS, {
 app.use(cors())
 app.use(express.json())
 app.use('/app', routeUrls)
-app.listen(4000, () => console.log("Server is up and running"))
+app.listen(4000, () => console.log("Server is connected to mongodb and running"))
