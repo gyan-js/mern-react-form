@@ -2,8 +2,8 @@ POST http://localhost:4000/app/signup
 Content-Type: application/json
 
 {
-    "fullName": "John Doe",
-    "username": "johndoe",
-    "email": "johndoe@qmail.com",
-    "password": "john123456"
+    "fullName": "Last Test",
+    "username": "lasttest",
+    "email": "testing@lasttest.com",
+    "password": "testlast1234456"
 }
