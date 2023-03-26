@@ -11,6 +11,12 @@ class Form extends Component {
             password: ''
         }
     }
+
+    changeName = (event) => {
+        this.setState({
+            name: event.target.value
+        })
+    }
     render(){
   return (
     <div className=' min-h-screen bg-white overflow-hidden'>
@@ -20,11 +26,11 @@ class Form extends Component {
         <div className='flex flex-col drop-shadow-md form  max-w-[448px] w-[100%]  p-[30px] pb-[48px] '>
             <div className='field pb-[24px] flex flex-col '>
                 <label className='text-[#000]  text-[14px] '>FULL NAME</label>
-                <input value={this.state.name} className='text-[16px] leading-[24px] min-h-[44px] rounded-[4px] outline-none border-none px-3 w-[380px]' maxLength="200" required placeholder='Enter your full name*' />
+                <input onChange={this.changeName} value={this.state.name} className='text-[16px] leading-[24px] min-h-[44px] rounded-[4px] outline-none border-none px-3 w-[380px]' maxLength="200" required placeholder='Enter your full name*' />
             </div>
             <div className='field pb-[24px] flex flex-col '>
                 <label className='text-[#000]  text-[14px] '>USERNAME</label>
-                <input value={this.state.user} className='text-[16px] leading-[24px] min-h-[44px] rounded-[4px] outline-none border-none px-3 w-[380px]' maxLength="200" required placeholder='Enter your username*'/>
+                <input value={this.state.username} className='text-[16px] leading-[24px] min-h-[44px] rounded-[4px] outline-none border-none px-3 w-[380px]' maxLength="200" required placeholder='Enter your username*'/>
             </div>
             <div className='field pb-[24px] flex flex-col '>
                 <label className='text-[#000]  text-[14px] '>EMAIL</label>
