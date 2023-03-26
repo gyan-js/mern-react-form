@@ -12,9 +12,28 @@ class Form extends Component {
         }
     }
 
-    changeName = (event) => {
+    changeName = (e) => {
         this.setState({
-            name: event.target.value
+            name: e.target.value
+        })
+    }
+
+    changeUsername = (e) => {
+        this.setState({
+            
+            username: e.target.value,
+        })
+    }
+
+    changeEmail = (e) => {
+        this.setState({
+            email: e.target.value
+        })
+    }
+
+    changePassword = (e) => {
+        this.setState({
+            password: e.target.value
         })
     }
     render(){
@@ -26,19 +45,19 @@ class Form extends Component {
         <div className='flex flex-col drop-shadow-md form  max-w-[448px] w-[100%]  p-[30px] pb-[48px] '>
             <div className='field pb-[24px] flex flex-col '>
                 <label className='text-[#000]  text-[14px] '>FULL NAME</label>
-                <input onChange={this.changeName} value={this.state.name} className='text-[16px] leading-[24px] min-h-[44px] rounded-[4px] outline-none border-none px-3 w-[380px]' maxLength="200" required placeholder='Enter your full name*' />
+                <input onChange={this.changeName} value={this.state.name} className='text-[16px] leading-[24px] min-h-[44px] rounded-[4px] outline-none border-none px-3 w-[380px]' maxLength="200" required placeholder='Enter your full name' />
             </div>
             <div className='field pb-[24px] flex flex-col '>
                 <label className='text-[#000]  text-[14px] '>USERNAME</label>
-                <input value={this.state.username} className='text-[16px] leading-[24px] min-h-[44px] rounded-[4px] outline-none border-none px-3 w-[380px]' maxLength="200" required placeholder='Enter your username*'/>
+                <input onChange={this.changeUsername} value={this.state.username} className='text-[16px] leading-[24px] min-h-[44px] rounded-[4px] outline-none border-none px-3 w-[380px]' maxLength="200" required placeholder='Enter your username'/>
             </div>
             <div className='field pb-[24px] flex flex-col '>
                 <label className='text-[#000]  text-[14px] '>EMAIL</label>
-                <input value={this.state.email} className='text-[16px] leading-[24px] min-h-[44px] rounded-[4px] outline-none border-none px-3 w-[380px]' maxLength="200" required placeholder='Enter your email*' type="email" />
+                <input onChange={this.changeEmail} value={this.state.email} className='text-[16px] leading-[24px] min-h-[44px] rounded-[4px] outline-none border-none px-3 w-[380px]' maxLength="200" required placeholder='Enter your email' type="email" />
             </div>
             <div className='field pb-[24px] flex flex-col '>
                 <label className='text-[#000]  text-[14px] '>PASSWORD</label>
-                <input onChange={this.on} value={this.state.password} className='text-[16px] leading-[24px] min-h-[44px] rounded-[4px] outline-none border-none px-3 w-[380px]' maxLength="200" required placeholder='Set your paasword*'  type="password"/>
+                <input onChange={this.changePassword} value={this.state.password} className='text-[16px] leading-[24px] min-h-[44px] rounded-[4px] outline-none border-none px-3 w-[380px]' maxLength="200" required placeholder='Set your paasword'  type="password"/>
             </div>
             <div className='field w-[100%] h-[50px] bg-[#5469d4] text-white border-none ouline-none rounded-[20px] flex justify-center text-center py-[10px] font-sans font-bold cursor-pointer hover:scale-105 '> SIGN UP</div>
         </div>
